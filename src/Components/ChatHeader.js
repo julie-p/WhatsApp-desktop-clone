@@ -6,15 +6,9 @@ import MoreVert from '@material-ui/icons/MoreVert';
 
 function ChatHeader() {
 
-    const [ seed, setSeed ] = useState('');
-
-    useEffect(() => {
-        setSeed(Math.floor(Math.random() * 5000));
-    }, []);
-
     return (
         <div className="chat__header">
-            <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
+            <Avatar />
 
             <div className="chat__headerInfo">
                 <h3>Pseudo</h3>
