@@ -8,7 +8,9 @@ function ChatFooter() {
 
     const sendMessage = (e) => {
         e.preventDefault();
-        console.log('You typed >>>', input)
+        console.log('>>>>>>>', input);
+
+        setInput("");
     };
 
     return (

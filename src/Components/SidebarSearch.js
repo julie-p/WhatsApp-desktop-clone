@@ -6,7 +6,7 @@ function SidebarSearch() {
         <div className="sidebar__search">
             <div className="sidebar__searchContainer">
                 <SearchOutlined />
-                <input placeholder="Rechercher ou démarrer une nouvelle conversation" type="text"/>
+                <input placeholder="Rechercher ou démarrer une nouvelle discussion" type="text"/>
             </div>
         </div>
     )

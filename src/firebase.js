@@ -1,10 +1,20 @@
+import firebase from 'firebase';
+
 const firebaseConfig = {
-    apiKey: "AIzaSyDKlkbKrF64SJU2X-_DUeFt4X5n81TL4R4",
-    authDomain: "whatsapp-desktop-clone.firebaseapp.com",
-    databaseURL: "https://whatsapp-desktop-clone.firebaseio.com",
-    projectId: "whatsapp-desktop-clone",
-    storageBucket: "whatsapp-desktop-clone.appspot.com",
-    messagingSenderId: "840648210697",
-    appId: "1:840648210697:web:cfadd7e0ecdd04f39abbd8",
-    measurementId: "G-NFMEP67NLM"
-};
+    apiKey: "AIzaSyCU4dqmUJSF-TO3iTQ3CHgWAhmfqs4h8uw",
+    authDomain: "whatsapp-clone-f028f.firebaseapp.com",
+    databaseURL: "https://whatsapp-clone-f028f.firebaseio.com",
+    projectId: "whatsapp-clone-f028f",
+    storageBucket: "whatsapp-clone-f028f.appspot.com",
+    messagingSenderId: "738995843391",
+    appId: "1:738995843391:web:7e98bd1266d5fc2331238a",
+    measurementId: "G-4VFJYD7K6K"
+  };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export { auth, provider };
+export default db;

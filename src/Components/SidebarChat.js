@@ -1,9 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import db from "../firebase";
 import '../styles/SidebarChat.css';
 import { Avatar } from "@material-ui/core";
 
 function SidebarChat({ addNewChat }) {
 
+    const [ rooms, setRooms ] = useState([]);
+
+    useEffect(() => {
+        db.collection('rooms').onSnapshot((snapshot) => 
+            setRooms(snapshot.docs.map(doc => 
+                ({ 
+                    id: doc.id,
+                    data: doc.data()
+                }))    
+            )
+        )
+    }, []);
 
     const createChat = () => {
         const roomName = prompt("Chercher un contact");
@@ -12,6 +25,7 @@ function SidebarChat({ addNewChat }) {
             //If addNewChat is clicked - do something
         }
     };
+    
 
     return !addNewChat ? (
         <div className="sidebarChat">
