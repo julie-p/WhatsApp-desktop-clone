@@ -6,7 +6,7 @@ function ChatBody() {
             <p className={`chat__message ${true && 'chat__receiver'}`}>
                 <span className="chat__name">Lily</span>
             Coucou !  
-            <span className="chat__timestamp">00:09am</span> 
+            <span className="chat__timestamp">00:09</span> 
             </p>
         </div>
     )
