@@ -8,7 +8,7 @@
 .sidebar__header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidebar__headerRight {
@@ -49,6 +49,10 @@
     border: none;
     margin-left: 10px;
     width: 100%;
+}
+
+.sidebar__searchContainer > input::placeholder {
+    opacity: .7;
 }
 
 .sidebar__searchContainer > input:focus {
