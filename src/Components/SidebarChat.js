@@ -9,7 +9,7 @@ function SidebarChat({ id, name, addNewChat }) {
         const roomName = prompt("Chercher un contact");
 
         if (roomName) {
-            //If addNewChat is clicked - do something
+            //If addNewChat is clicked - add a room in db
             db.collection('rooms').add({
                 name: roomName,
             })
