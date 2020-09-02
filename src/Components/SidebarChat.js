@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/SidebarChat.css';
+import { Link } from 'react-router-dom';
 import db from '../firebase.js'; 
 import { Avatar } from "@material-ui/core";
 
@@ -17,13 +18,15 @@ function SidebarChat({ id, name, addNewChat }) {
     };
     
     return !addNewChat ? (
-        <div className="sidebarChat">
-            <Avatar />
-            <div className="sidebarChat__info">
-                <h2>{name}</h2>
-                <p>Dernier message...</p>
-            </div>
-        </div>   
+        <Link to={`/rooms/${id}`}>
+            <div className="sidebarChat">
+                <Avatar />
+                <div className="sidebarChat__info">
+                    <h2>{name}</h2>
+                    <p>Dernier message...</p>
+                </div>
+            </div> 
+        </Link>   
     ) : (
         <div 
         onClick={createChat}
